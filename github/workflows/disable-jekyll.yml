@@ -1,0 +1,20 @@
+name: Disable Jekyll and use Astro
+
+on:
+  workflow_dispatch:
+
+jobs:
+  disable-jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Create .nojekyll
+        run: echo "" > .nojekyll
+        
+      - name: Remove Jekyll config
+        run: |
+          rm -f _config.yml
+          rm -f Gemfile
+          rm -f Gemfile.lock
