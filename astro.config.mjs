@@ -6,6 +6,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: 'https://jorgehtirado.github.io',
   base: '/',
+  output: 'static',
+  build: {
+    format: 'directory'
+  },
  vite: {
    plugins: [tailwindcss()],
  }
