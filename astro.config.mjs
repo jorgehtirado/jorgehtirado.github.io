@@ -11,7 +11,7 @@ export default defineConfig({
     format: 'directory'
   },
   redirects: {
-    '/': '/about'  // Redirige raíz a about
+    '/': '/index'  // Redirige raíz a about
   },
  vite: {
    plugins: [tailwindcss()],
