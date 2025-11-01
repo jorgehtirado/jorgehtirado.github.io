@@ -10,6 +10,9 @@ export default defineConfig({
   build: {
     format: 'directory'
   },
+  redirects: {
+    '/': '/about'  // Redirige raíz a about
+  },
  vite: {
    plugins: [tailwindcss()],
  }
